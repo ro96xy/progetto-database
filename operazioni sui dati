@@ -2,7 +2,7 @@
 1. cercare libri di un determinato autore
 SELECT * FROM `Libri` WHERE `autore` = 'J.K. Rowling';
 
-2. ceracre libri di un determinato genere:
+2. cercare libri di un determinato genere:
 SELECT * FROM `Libri` WHERE `genere` = 'Fantasy';
 
 3. cercare libri disponibili:
@@ -33,7 +33,6 @@ WHERE `IDlibro` = 'book001';
 
 
 -- monitoraggio delle attività utente: seguire la storia degli scambi di un utente specifico, in un periodo specifico --
-
 SELECT
     rs.`IDrequest`,
     rs.`libroRichiesto`,
