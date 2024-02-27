@@ -1,0 +1,52 @@
+-- query per cercare libri --
+1. cercare libri di un determinato autore
+SELECT * FROM `Libri` WHERE `autore` = 'J.K. Rowling';
+
+2. ceracre libri di un determinato genere:
+SELECT * FROM `Libri` WHERE `genere` = 'Fantasy';
+
+3. cercare libri disponibili:
+SELECT * FROM `Libri` WHERE `disponibilita` = true;
+
+4. cercare libri con un certo titolo:
+SELECT * FROM `Libri` WHERE `titolo` LIKE '%Harry Potter%';
+
+
+-- query per filtrare utenti --
+1. filtrare utenti con preferenze di genere letterario specifiche:
+SELECT * FROM `Utenti` WHERE `preferenzeGenereLetterario` = 'Fantasy';
+
+2. filtrare utenti con feedback positivo (valutazioni >4): 
+SELECT * FROM `Utenti` WHERE `valutazioni` > 4;
+
+3. filtrare utenti registrati dopo una certa data:
+SELECT * FROM `Utenti` WHERE `dataDiRegistrazione` > '2022-02-10';
+
+4. filtrare utenti in base all'indirizzo di spedizione:
+SELECT * FROM `Utenti` WHERE `indirizzoDiSpedizione` LIKE '%Via Roma%';
+
+
+-- modificare lo stato di disponibilità di un libro (esempio: contrassegnarlo come non disponibile) --
+UPDATE `Libri`
+SET `disponibilita` = false
+WHERE `IDlibro` = 'book001';
+
+
+-- monitoraggio delle attività utente: seguire la storia degli scambi di un utente specifico, in un periodo specifico --
+
+SELECT
+    rs.`IDrequest`,
+    rs.`libroRichiesto`,
+    rs.`libroOffertoInCambio`,
+    rs.`messaggioAggiuntivo`,
+    rs.`statoRichiesta`,
+    rs.`dataRichiesta`
+FROM
+    `Richieste_di_scambio` rs
+JOIN
+    `Libri` l ON rs.`libroRichiesto` = l.`titolo`
+JOIN
+    `Utenti` u ON l.`proprietarioAttuale` = u.`IDuser`
+WHERE
+    u.`IDuser` = 'userID'
+    AND rs.`dataRichiesta` BETWEEN 'dataInizio' AND 'dataFine';
