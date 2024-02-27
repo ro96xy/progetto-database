@@ -1,0 +1,52 @@
+--- Utenti ---
+
+CREATE TABLE `Utenti` (
+    `IDuser` VARCHAR(30) PRIMARY KEY,
+    `nome` VARCHAR(30) NOT NULL,
+    `cognome` VARCHAR(30) NOT NULL,
+    `indirizzoEmail` VARCHAR(50) UNIQUE NOT NULL,
+    `indirizzoDiSpedizione` VARCHAR(50),
+    `numeroDiTelefono` VARCHAR(15),
+    `valutazioni` INT,
+    `dataDiRegistrazione` DATE NOT NULL,
+    `preferenzeGenereLetterario` VARCHAR(50)
+);
+
+--- Libri ---
+CREATE TABLE `Libri` (
+    `IDlibro` VARCHAR(30) PRIMARY KEY,
+    `titolo` VARCHAR(60) NOT NULL,
+    `autore` VARCHAR(30) NOT NULL,
+    `condizioniLibro` VARCHAR(50),
+    `genere` VARCHAR(50),
+    `annoDiPubblicazione` INT,
+    `proprietarioAttuale` VARCHAR(50),
+    `disponibilita` BOOLEAN
+FOREIGN KEY (`proprietarioAttuale`) REFERENCES `Utenti` (`IDuser`)
+);
+
+
+--- Recensioni ---
+CREATE TABLE `Recensioni` (
+    `IDreview` VARCHAR(50) PRIMARY KEY,
+    `valutazione` INT,
+    `commento` TEXT,
+    `dataRecensione` DATE,
+    `nomeUtente` VARCHAR(50),
+    `titoloLibroRecensito` VARCHAR(60)
+FOREIGN KEY (`nomeUtente`) REFERENCES `Utenti` (`IDuser`)
+FOREIGN KEY (`titoloLibroRecensito`) REFERENCES `Libri` (`titolo`)
+);
+
+
+--- Richieste_di_scambio ---
+CREATE TABLE `Richieste_di_scambio` (
+    `IDrequest` VARCHAR(50) PRIMARY KEY,
+    `libroRichiesto` VARCHAR(60) NOT NULL,
+    `libroOffertoInCambio` VARCHAR(60) NOT NULL,
+    `messaggioAggiuntivo` TEXT,
+    `statoRichiesta` VARCHAR(50),
+    `dataRichiesta` DATE
+FOREIGN KEY (`libroRichiesto`) REFERENCES `Libri` (`titolo`)
+);
+
