@@ -1,0 +1,366 @@
+---- UTENTI ----
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user123',
+    'Mario',
+    'Rossi',
+    'mario.rossi@example.com',
+    'Via Roma 123',
+    '+39 123 456789',
+    5,
+    '2022-02-09',
+    'Romanzi'
+);
+
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user456',
+    'Laura',
+    'Bianchi',
+    'laura.bianchi@example.com',
+    'Via Verdi 789',
+    '+39 987 654321',
+    3,
+    '2022-02-10',
+    'Fantascienza'
+);
+
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user789',
+    'Giovanni',
+    'Verdi',
+    'giovanni.verdi@example.com',
+    'Via Dante 456',
+    '+39 456 789012',
+    4,
+    '2022-02-11',
+    'Gialli'
+);
+
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user101',
+    'Anna',
+    'Neri',
+    'anna.neri@example.com',
+    'Via Mazzini 789',
+    '+39 789 012345',
+    2,
+    '2022-02-12',
+    'Thriller'
+);
+
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user202',
+    'Sara',
+    'Russo',
+    'sara.russo@example.com',
+    'Via Garibaldi 123',
+    '+39 012 345678',
+    5,
+    '2022-02-13',
+    'Romanzi Rosa'
+);
+
+INSERT INTO `Utenti` (
+    `IDuser`, 
+    `nome`, 
+    `cognome`, 
+    `indirizzoEmail`, 
+    `indirizzoDiSpedizione`, 
+    `numeroDiTelefono`, 
+    `valutazioni`, 
+    `dataDiRegistrazione`, 
+    `preferenzeGenereLetterario`
+) VALUES (
+    'user303',
+    'Marco',
+    'Ferrari',
+    'marco.ferrari@example.com',
+    'Via Vittorio Emanuele 456',
+    '+39 345 678901',
+    3,
+    '2022-02-14',
+    'Fantasy'
+);
+
+
+---- LIBRI ----
+INSERT INTO `Libri` (
+    `IDlibro`, 
+    `titolo`, 
+    `autore`, 
+    `condizioniLibro`, 
+    `genere`, 
+    `annoDiPubblicazione`, 
+    `proprietarioAttuale`, 
+    `disponibilita`
+) VALUES (
+    'book001',
+    'Il Signore degli Anelli',
+    'J.R.R. Tolkien',
+    'Buone condizioni',
+    'Fantasy',
+    1954,
+    'user123',
+    true
+);
+
+INSERT INTO `Libri` (
+    `IDlibro`, 
+    `titolo`, 
+    `autore`, 
+    `condizioniLibro`, 
+    `genere`, 
+    `annoDiPubblicazione`, 
+    `proprietarioAttuale`, 
+    `disponibilita`
+) VALUES (
+    'book002',
+    '1984',
+    'George Orwell',
+    'Ottime condizioni',
+    'Distopia',
+    1949,
+    'user456',
+    true
+);
+
+INSERT INTO `Libri` (
+    `IDlibro`, 
+    `titolo`, 
+    `autore`, 
+    `condizioniLibro`, 
+    `genere`, 
+    `annoDiPubblicazione`, 
+    `proprietarioAttuale`, 
+    `disponibilita`
+) VALUES (
+    'book003',
+    'Cronache del ghiaccio e del fuoco',
+    'George R.R. Martin',
+    'Usato',
+    'Fantasy',
+    1996,
+    'user789',
+    true
+);
+
+INSERT INTO `Libri` (
+    `IDlibro`, 
+    `titolo`, 
+    `autore`, 
+    `condizioniLibro`, 
+    `genere`, 
+    `annoDiPubblicazione`, 
+    `proprietarioAttuale`, 
+    `disponibilita`
+) VALUES (
+    'book004',
+    'Don Chisciotte',
+    'Miguel de Cervantes',
+    'Buone condizioni',
+    'Romanzo',
+    1605,
+    'user101',
+    true
+);
+
+INSERT INTO `Libri` (
+    `IDlibro`, 
+    `titolo`, 
+    `autore`, 
+    `condizioniLibro`, 
+    `genere`, 
+    `annoDiPubblicazione`, 
+    `proprietarioAttuale`, 
+    `disponibilita`
+) VALUES (
+    'book005',
+    'Harry Potter e la pietra filosofale',
+    'J.K. Rowling',
+    'Nuovo',
+    'Fantasy',
+    1997,
+    'user202',
+    true
+);
+
+
+---- RECENSIONI ----
+INSERT INTO `Recensioni` (
+    `IDreview`,
+    `valutazione`,
+    `commento`,
+    `dataRecensione`,
+    `nomeUtente`,
+    `titoloLibroRecensito`
+) VALUES (
+    'review001',
+    4,
+    'Molto emozionante! Consigliato a tutti gli amanti del fantasy.',
+    '2022-02-15',
+    'user123',
+    'Il Signore degli Anelli'
+);
+
+INSERT INTO `Recensioni` (
+    `IDreview`,
+    `valutazione`,
+    `commento`,
+    `dataRecensione`,
+    `nomeUtente`,
+    `titoloLibroRecensito`
+) VALUES (
+    'review002',
+    5,
+    'Capolavoro assoluto. Da leggere senza esitazioni.',
+    '2022-02-16',
+    'user456',
+    '1984'
+);
+
+INSERT INTO `Recensioni` (
+    `IDreview`,
+    `valutazione`,
+    `commento`,
+    `dataRecensione`,
+    `nomeUtente`,
+    `titoloLibroRecensito`
+) VALUES (
+    'review003',
+    3,
+    'Interessante ma con alcune incongruenze nella trama.',
+    '2022-02-17',
+    'user789',
+    'Cronache del ghiaccio e del fuoco'
+);
+
+INSERT INTO `Recensioni` (
+    `IDreview`,
+    `valutazione`,
+    `commento`,
+    `dataRecensione`,
+    `nomeUtente`,
+    `titoloLibroRecensito`
+) VALUES (
+    'review004',
+    4,
+    'Un classico intramontabile. Consigliato a tutti gli appassionati di letteratura.',
+    '2022-02-18',
+    'user101',
+    'Don Chisciotte'
+);
+
+
+---- RICHIESTE DI SCAMBIO ----
+INSERT INTO `Richieste_di_scambio` (
+    `IDrequest`,
+    `libroRichiesto`,
+    `libroOffertoInCambio`,
+    `messaggioAggiuntivo`,
+    `statoRichiesta`,
+    `dataRichiesta`
+) VALUES (
+    'request001',
+    'Il Signore degli Anelli',
+    '1984',
+    'Mi piacerebbe scambiare questi due libri. Che ne dici?',
+    'In attesa',
+    '2022-02-19'
+);
+
+INSERT INTO `Richieste_di_scambio` (
+    `IDrequest`,
+    `libroRichiesto`,
+    `libroOffertoInCambio`,
+    `messaggioAggiuntivo`,
+    `statoRichiesta`,
+    `dataRichiesta`
+) VALUES (
+    'request002',
+    'Cronache del ghiaccio e del fuoco',
+    'Don Chisciotte',
+    'Ho letto entrambi e sarei interessato a uno scambio. Che ne dici?',
+    'In attesa',
+    '2022-02-20'
+);
+
+INSERT INTO `Richieste_di_scambio` (
+    `IDrequest`,
+    `libroRichiesto`,
+    `libroOffertoInCambio`,
+    `messaggioAggiuntivo`,
+    `statoRichiesta`,
+    `dataRichiesta`
+) VALUES (
+    'request003',
+    'Harry Potter e la pietra filosofale',
+    '1984',
+    'Ho letto entrambi e vorrei scambiare. Può andare bene?',
+    'In attesa',
+    '2022-02-21'
+);
+
+INSERT INTO `Richieste_di_scambio` (
+    `IDrequest`,
+    `libroRichiesto`,
+    `libroOffertoInCambio`,
+    `messaggioAggiuntivo`,
+    `statoRichiesta`,
+    `dataRichiesta`
+) VALUES (
+    'request004',
+    'Don Chisciotte',
+    'Il Signore degli Anelli',
+    'Ho già letto entrambi. Possiamo scambiarli?',
+    'In attesa',
+    '2022-02-22'
+);
