@@ -1,5 +1,4 @@
 --- Utenti ---
-
 CREATE TABLE `Utenti` (
     `IDuser` VARCHAR(30) PRIMARY KEY,
     `nome` VARCHAR(30) NOT NULL,
@@ -11,6 +10,7 @@ CREATE TABLE `Utenti` (
     `dataDiRegistrazione` DATE NOT NULL,
     `preferenzeGenereLetterario` VARCHAR(50)
 );
+
 
 --- Libri ---
 CREATE TABLE `Libri` (
